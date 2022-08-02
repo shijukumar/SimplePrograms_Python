@@ -22,7 +22,22 @@ def sumofN(n):
     total = 0
     for num in range (n+1):
         total = total + num
-    print(total)
+    print(f"Sum of Natural Numbers from 1 to {n} is  {total}")
+
 
 #calling the function sumofN
 sumofN(5)
+
+#sum of n natural number using recursion
+
+def sumofn_rec(num):
+    if(num == 1):
+        return num
+    else:
+        return (num + sumofn_rec(num - 1))
+    
+number = int(input("Please Enter any Number: "))
+
+total_value = sumofn_rec(number)
+
+print(f"Sum of Natural Numbers from 1 to {number} is  {total_value}")
