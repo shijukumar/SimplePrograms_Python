@@ -30,3 +30,19 @@ if len(factors) == 2:
     print(f"{n} is prime\n The factors are {factors}")
 elif len(factors) > 2:
     print(f"{n} is composite\n The factors are {factors}")
+
+#To print the prime numbers between given values
+start = int(input('Enter the starting number: '))
+stop = int(input("Enter the ending number: "))
+
+prime = []
+for n in range (start, stop):
+    factors = []
+    for i in range(1, n+1):
+        rem = n%i
+        if rem == 0:
+            factors.append(i)
+    if len(factors) == 2:
+        prime.append(n)
+                
+print(prime)
